@@ -7,6 +7,7 @@ This repository contains a collection of useful WordPress shortcodes that can be
 1. [Installation](#installation)
 2. [Available Shortcodes](#available-shortcodes)
    - [Copyright Year Shortcode](#copyright-year-shortcode)
+   - [URL Parameter Shortcode](#url-parameter-shortcode)
 3. [Contributing](#contributing)
 4. [License](#license)
 
@@ -50,6 +51,28 @@ This shortcode displays the copyright symbol (©), the starting year, and the cu
 **Attributes:**
 
 - `start_year`: The year when your site was launched. Default is `2020`.
+
+### URL Parameter Shortcode
+
+**File:** `shortcodes/url-parameter.php`
+
+This shortcode retrieves a specific parameter from the URL and displays its value in your WordPress content. It's useful for creating dynamic content based on query string parameters.
+
+**Usage:**
+
+```php
+[get_url_param param="your_parameter" default="Default Value"]
+```
+
+**Example Output:**
+
+- If the URL is `https://example.com/page/?name=Dan` and you use `[get_url_param param="name" default="Guest"]`, the output will be: `Dan`.
+- If the `name` parameter is not present in the URL, the output will be: `Guest`.
+
+**Attributes:**
+
+- `param`: The name of the URL parameter to retrieve. Required.
+- `default`: The default value to display if the parameter is not found in the URL. Optional, default is an empty string.
 
 ## Contributing
 
