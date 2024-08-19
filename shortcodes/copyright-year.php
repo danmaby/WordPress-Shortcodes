@@ -3,6 +3,11 @@
 // Register the shortcode
 function display_copyright_years($atts)
 {
+  /**
+   * Generates a copyright string based on the provided start year and the current year.
+   *
+   * @param array $atts
+   **/
   // Extract attributes and set a default starting year
   $atts = shortcode_atts(
     [
